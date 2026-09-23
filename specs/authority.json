@@ -1,0 +1,28 @@
+{
+  "version": "8.0",
+  "repositoryId": "eliware/infrastructure-template",
+  "description": "Repository-local authority record for the Eliware project template.",
+  "subjects": [
+    {
+      "id": "infrastructure-template.implementation",
+      "kind": "repository-implementation",
+      "authority": { "path": "../" },
+      "directives": [{ "path": "./directives.json", "ids": ["E-1"] }],
+      "implementation": [
+        {
+          "path": "../infrastructure-template.mjs",
+          "role": "infrastructure-entrypoint"
+        }
+      ],
+      "consumers": ["Projects derived from infrastructure-template"],
+      "reviewers": ["Eliware maintainers"],
+      "evidence": [],
+      "notAuthoritativeFor": [
+        "Eliware policy",
+        "operations",
+        "publication authorization"
+      ],
+      "status": "active"
+    }
+  ]
+}
