@@ -1,19 +1,18 @@
 {
   "name": "@eliware/infrastructure-template",
   "type": "module",
-  "version": "1.1.0",
+  "version": "9.0.0",
   "description": "An Eliware infrastructure repository template for desired state, validation, rollout, and rollback boundaries.",
-  "main": "infrastructure-template.mjs",
   "scripts": {
-    "start": "node infrastructure-template.mjs",
-    "test": "npx --node-options=\"--experimental-vm-modules --no-warnings\" jest --detectOpenHandles --silent --coverage",
-    "test:gaps": "npm test 2>&1 | grep '|' | grep -vF '|     100 |      100 |     100 |     100 |'",
-    "lint": "npx oxlint .",
-    "pack": "npm pack --dry-run"
+    "test": "eliware-test",
+    "lint": "eliware-test --lint",
+    "audit": "eliware-test --audit",
+    "format": "eliware-test --format",
+    "format:check": "eliware-test --format-check"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/eliware/infrastructure-template.git"
+    "url": "https://github.com/eliware/infrastructure-template"
   },
   "keywords": [
     "infrastructure-template",
@@ -24,25 +23,15 @@
   ],
   "author": "Eli Sterling, eliware.org <eli@eliware.org>",
   "license": "MIT",
+  "private": true,
+  "engines": {
+    "node": "26"
+  },
   "eliware": {
     "apply": [
       "general",
-      "infrastructure"
-    ],
-    "authority": {
-      "authoritativeFor": [
-        "Infrastructure template structure and desired-state workflow."
-      ],
-      "notAuthoritativeFor": [
-        "Shared Eliware policy, operations, and publication authorization."
-      ]
-    },
-    "crosslinks": [
-      {
-        "path": "eliware/conventions",
-        "relationship": "relatedAuthority",
-        "authoritativeFor": "Applicable repository conventions."
-      }
+      "infrastructure",
+      "private"
     ]
   },
   "bugs": {
@@ -50,26 +39,27 @@
   },
   "homepage": "https://github.com/eliware/infrastructure-template#readme",
   "devDependencies": {
-    "jest": "^30.4.2"
+    "@eliware/test": "^8.0.0"
   },
   "jest": {
     "testEnvironment": "node",
     "testMatch": [
-      "**/?(*.)+(spec|test).[jt]s?(x)",
-      "**/?(*.)+(spec|test).mjs"
+      "**/tests/**/*.test.mjs"
     ]
   },
-  "dependencies": {
-    "@eliware/common": "^1.1.7",
-    "dotenv": "^17.4.2"
-  },
-  "files": [
-    "infrastructure-template.mjs",
-    "examples",
-    "src",
-    "infrastructure-template.service",
-    ".env.example",
-    "README.md",
-    "LICENSE"
-  ]
+  "prettier": {
+    "printWidth": 100,
+    "tabWidth": 2,
+    "useTabs": false,
+    "semi": true,
+    "singleQuote": false,
+    "quoteProps": "as-needed",
+    "jsxSingleQuote": false,
+    "trailingComma": "all",
+    "bracketSpacing": true,
+    "bracketSameLine": false,
+    "arrowParens": "always",
+    "proseWrap": "preserve",
+    "endOfLine": "lf"
+  }
 }

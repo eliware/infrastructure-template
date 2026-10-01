@@ -1,133 +1,99 @@
 # [![eliware.org](https://eliware.org/logos/brand.png)](https://discord.gg/M6aTR9eTwN)
 
-## @eliware/infrastructure-template [![license](https://img.shields.io/github/license/eliware/infrastructure-template.svg)](LICENSE)[![build status](https://github.com/eliware/infrastructure-template/actions/workflows/nodejs.yml/badge.svg)](https://github.com/eliware/infrastructure-template/actions)
-
-Documentation: [docs](docs/README.md) · [specifications](specs/README.md) · [examples](examples/README.md) · [release notes](RELEASE_NOTES.md)
-
-A starter template for new Node.js projects. Use this as a foundation for your next application or service.
-
----
+## @eliware/infrastructure-template [![license](https://img.shields.io/github/license/eliware/infrastructure-template.svg)](LICENSE) [![CI](https://github.com/eliware/infrastructure-template/actions/workflows/ci.yml/badge.svg)](https://github.com/eliware/infrastructure-template/actions/workflows/ci.yml)
 
 ## Table of Contents
 
 - [Features](#features)
 - [Requirements](#requirements)
-- [Getting Started](#getting-started)
+- [Setup](#setup)
+- [Usage](#usage)
 - [Development](#development)
 - [Testing](#testing)
-- [Errors / Troubleshooting](#errors--troubleshooting)
+- [Troubleshooting](#troubleshooting)
 - [Security](#security)
-- [Customization](#customization)
+- [Managed targets](#managed-targets)
+- [Configuration](#configuration)
+- [Desired state](#desired-state)
+- [Validation](#validation)
+- [Change boundaries](#change-boundaries)
 - [Support](#support)
 - [License](#license)
 - [Links](#links)
 
 ## Features
 
-- Pre-configured for Node.js (ESM)
-- Environment variable support via dotenv
-- Logging and signal handling via `@eliware/common`
-- Jest for testing
-- MIT License
+An Eliware infrastructure repository template for desired state, validation, rollout, and rollback boundaries. It provides an indexed desired-state surface and shared Node.js repository validation.
+
+Package description: An Eliware infrastructure repository template for desired state, validation, rollout, and rollback boundaries. Author: Eli Sterling, eliware.org <eli@eliware.org>. License: MIT.
 
 ## Requirements
 
-- Node.js 26 or newer
-- A new project directory and environment appropriate to the application you build from this template
+Use Node.js 26 and npm. The template is private and must remain private.
 
 ## Setup
 
-1. **Clone this template:**
-
-   ```bash
-   git clone https://github.com/eliware/infrastructure-template.git
-   cd infrastructure-template
-   rm -rf .git
-   git init
-   npm install
-   ```
-
-2. **Update project details:**
-   - Edit `package.json` (name, description, author, etc.)
-   - Update this `README.md` as needed
-   - Change the license if required
+Create a private repository from this template, replace its package identity and repository URLs, then run npm ci. Add the desired state and deterministic checks for the managed infrastructure.
 
 ## Usage
 
-Use this repository as a starting point: clone it, rename the package and
-entrypoint, configure `.env`, and replace the starter implementation.
-
-## Managed targets
-
-Document each managed platform, environment, and ownership boundary.
-
-## Desired state
-
-Keep committed declarative configuration and deployment inputs separate from
-live runtime evidence and operational procedures.
-
-## Change boundaries
-
-Document rollout, validation, promotion, rollback, and authorization boundaries.
+Use desired-state/ for committed declarative inputs. Define the managed targets and environments in a derived repository; this template does not include live infrastructure configuration.
 
 ## Development
 
-- Main entry: `infrastructure-template.mjs`
-- Start your app:
-
-  ```bash
-  node infrastructure-template.mjs
-  ```
-
-- Add your code in new files and import as needed.
+Read AGENTS.md, specs/README.md, and the applicable shared conventions before changing the template. Keep repository-specific requirements in specs/directives.json.
 
 ## Testing
 
-- Run tests and coverage-gap checks with:
-
-  ```bash
-  npm test
-  npm run test:gaps
-  npm run lint
-   npm run pack
-  ```
-
-- Add your tests in the `__tests__` folder or alongside your code.
-
-## Template inheritance
-
-Keep the template relationship when cloning specialized templates. Use `origin` for the new project and `upstream` for this template, then fetch and review upstream changes before merging.
-
-## Customization
-
-- Replace or extend the logging and signal handling as needed.
-- Add dependencies and scripts to fit your project.
-- Remove or modify template files and sections.
+Run npm test for aggregate repository validation through eliware-test. CI runs npm ci followed by npm test. Add infrastructure-specific deterministic validation when a derived repository defines the corresponding manifests and schemas.
 
 ## Troubleshooting
 
-This repository is a starter application, not a production service. Replace placeholder metadata and application logic after cloning. Keep `.env` local, verify configuration before startup, and use `registerSignals`/`registerHandlers` for explicit graceful shutdown and error handling.
+If validation cannot find Node.js or npm, install Node.js 26 and run npm ci. A passing repository check does not prove that deployed infrastructure is healthy.
 
 ## Security
 
-Never commit `.env`, tokens, passwords, private keys, or credential-bearing URLs. Store secrets in the deployment environment or secret manager, and review dependencies and permissions before deploying a derived project.
+Keep the repository private. Do not commit plaintext secrets, credentials, decrypted runtime state, or live-only state. Encrypted secret payloads may be committed. Review committed inputs for secrets even when they are encrypted.
+
+## Managed targets
+
+A derived repository must identify each managed platform, environment, purpose, and ownership boundary. No live target is configured by this template.
+
+## Configuration
+
+The template has no runtime configuration or environment variables. Package metadata and .knit/deploy.yaml configure repository tooling and synchronization; they are not runtime settings.
+
+## Desired state
+
+Keep committed declarative configuration and deployment inputs in desired-state/, organized by managed target and environment. Keep live runtime evidence and canonical operating procedures in the owning Operations or workspace repository.
+
+## Validation
+
+Run deterministic syntax, schema, reference, render, and safety checks for the desired state present in a derived repository. Keep platform-specific preflights in that repository. A successful render or repository validation does not prove live infrastructure health.
+
+## Change boundaries
+
+Document promotion and rollback procedures in the owning Operations or workspace repository and link to them here. Do not treat a commit, validation pass, or render as authorization to deploy.
 
 ## Support
 
-For help, questions, or to chat with the author and community, visit:
+For help or discussion, join the Eliware community:
 
-[![Discord](https://eliware.org/logos/discord_96.png)](https://discord.gg/M6aTR9eTwN)[![eliware.org](https://eliware.org/logos/eliware_96.png)](https://discord.gg/M6aTR9eTwN)
+[![Discord](https://eliware.org/logos/discord_96.png)](https://discord.gg/M6aTR9eTwN)
 
 **[eliware.org on Discord](https://discord.gg/M6aTR9eTwN)**
 
 ## License
 
-[MIT © 2025 Eli Sterling, eliware.org](LICENSE)
+[license](LICENSE)
 
 ## Links
 
+Documentation: [specifications](specs/README.md)
+
+- [Canonical repository profile specifications](https://github.com/eliware/test/blob/main/specs/conventions/README.md)
 - [Home Page](https://eliware.org)
 - [GitHub Repo](https://github.com/eliware/infrastructure-template)
 - [GitHub Org](https://github.com/eliware)
-- [GitHub Personal](https://github.com/eli-sterling)
+- [Eli Sterling on GitHub](https://github.com/eli-sterling)
 - [Discord](https://discord.gg/M6aTR9eTwN)
