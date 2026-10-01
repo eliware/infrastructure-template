@@ -89,11 +89,11 @@ For help or discussion, join the Eliware community:
 
 ## Links
 
-Documentation: [specifications](specs/README.md)
+- Documentation: [specifications](specs/README.md)
 
 - [Canonical repository profile specifications](https://github.com/eliware/test/blob/main/specs/conventions/README.md)
 - [Home Page](https://eliware.org)
-- [GitHub Repo](https://github.com/eliware/infrastructure-template)
+- [GitHub Repo](https://github.com/eliware/infrastructure-template) (`git+https://github.com/eliware/infrastructure-template.git`)
 - [GitHub Org](https://github.com/eliware)
 - [Eli Sterling on GitHub](https://github.com/eli-sterling)
 - [Discord](https://discord.gg/M6aTR9eTwN)
