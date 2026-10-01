@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/eliware/infrastructure-template"
+    "url": "git+https://github.com/eliware/infrastructure-template.git"
   },
   "keywords": [
     "infrastructure-template",
@@ -21,7 +21,7 @@
     "starter",
     "template"
   ],
-  "author": "Eli Sterling, eliware.org <eli@eliware.org>",
+  "author": "Eliware <eliware@eliware.org>",
   "license": "MIT",
   "private": true,
   "engines": {

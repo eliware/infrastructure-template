@@ -25,7 +25,7 @@
 
 An Eliware infrastructure repository template for desired state, validation, rollout, and rollback boundaries. It provides an indexed desired-state surface and shared Node.js repository validation.
 
-Package description: An Eliware infrastructure repository template for desired state, validation, rollout, and rollback boundaries. Author: Eli Sterling, eliware.org <eli@eliware.org>. License: MIT.
+Package description: An Eliware infrastructure repository template for desired state, validation, rollout, and rollback boundaries. Author: Eliware <eliware@eliware.org>. License: MIT.
 
 ## Requirements
 
