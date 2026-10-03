@@ -1,6 +1,6 @@
 # [![eliware.org](https://eliware.org/logos/brand.png)](https://discord.gg/M6aTR9eTwN)
 
-## @eliware/infrastructure-template [![license](https://img.shields.io/github/license/eliware/infrastructure-template.svg)](LICENSE) [![CI](https://github.com/eliware/infrastructure-template/actions/workflows/ci.yml/badge.svg)](https://github.com/eliware/infrastructure-template/actions/workflows/ci.yml)
+## @eliware/infrastructure-template [![License](https://img.shields.io/github/license/eliware/infrastructure-template)](https://github.com/eliware/infrastructure-template/blob/main/LICENSE) [![CI](https://github.com/eliware/infrastructure-template/actions/workflows/ci.yml/badge.svg)](https://github.com/eliware/infrastructure-template/actions/workflows/ci.yml)
 
 ## Table of Contents
 
@@ -23,9 +23,11 @@
 
 ## Features
 
-An Eliware infrastructure repository template for desired state, validation, rollout, and rollback boundaries. It provides an indexed desired-state surface and shared Node.js repository validation.
+This template owns reusable infrastructure repository structure; each derived repository owns its platform-specific desired state and change boundaries.
 
 Package description: An Eliware infrastructure repository template for desired state, validation, rollout, and rollback boundaries. Author: Eliware <eliware@eliware.org>. License: MIT.
+
+An Eliware infrastructure repository template for desired state, validation, rollout, and rollback boundaries. It provides an indexed desired-state surface and shared Node.js repository validation.
 
 ## Requirements
 
@@ -41,7 +43,9 @@ Use desired-state/ for committed declarative inputs. Define the managed targets 
 
 ## Development
 
-Read AGENTS.md, specs/README.md, and the applicable shared conventions before changing the template. Keep repository-specific requirements in specs/directives.json.
+Read AGENTS.md, specs/README.md, and the applicable shared conventions before changing the template. Keep repository-specific requirements in specs/directives.yaml.
+
+Documentation: [specifications](specs/README.md)
 
 ## Testing
 
@@ -89,11 +93,10 @@ For help or discussion, join the Eliware community:
 
 ## Links
 
-- Documentation: [specifications](specs/README.md)
-
-- [Canonical repository profile specifications](https://github.com/eliware/test/blob/main/specs/conventions/README.md)
-- [Home Page](https://eliware.org)
-- [GitHub Repo](https://github.com/eliware/infrastructure-template) (`git+https://github.com/eliware/infrastructure-template.git`)
-- [GitHub Org](https://github.com/eliware)
-- [Eli Sterling on GitHub](https://github.com/eli-sterling)
+- [Home Page](https://github.com/eliware/infrastructure-template#readme)
+- [GitHub repository](https://github.com/eliware/infrastructure-template.git)
+- [Eliware](https://eliware.org)
+- [GitHub organization](https://github.com/eliware)
 - [Discord](https://discord.gg/M6aTR9eTwN)
+- [Documentation](https://github.com/eliware/docs/blob/main/repo-map.yaml) · [docs](docs/README.md)
+- [specifications](specs/README.md)

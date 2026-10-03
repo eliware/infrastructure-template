@@ -1,7 +1,7 @@
 {
   "name": "@eliware/infrastructure-template",
   "type": "module",
-  "version": "9.0.0",
+  "version": "10.0.0",
   "description": "An Eliware infrastructure repository template for desired state, validation, rollout, and rollback boundaries.",
   "scripts": {
     "test": "eliware-test",
@@ -39,13 +39,28 @@
   },
   "homepage": "https://github.com/eliware/infrastructure-template#readme",
   "devDependencies": {
-    "@eliware/test": "^9.0.0"
+    "@eliware/test": "^10.0.0"
   },
   "jest": {
     "testEnvironment": "node",
     "testMatch": [
       "**/tests/**/*.test.mjs"
-    ]
+    ],
+    "collectCoverageFrom": [
+      "src/**/*.mjs"
+    ],
+    "coverageReporters": [
+      "text",
+      "json-summary"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 100,
+        "functions": 100,
+        "lines": 100,
+        "statements": 100
+      }
+    }
   },
   "prettier": {
     "printWidth": 100,
