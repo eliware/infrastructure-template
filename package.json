@@ -28,6 +28,7 @@
     "node": "26"
   },
   "eliware": {
+    "id": "E-9000",
     "apply": [
       "general",
       "infrastructure",
