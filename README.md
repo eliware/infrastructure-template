@@ -1,6 +1,8 @@
 # [![eliware.org](https://eliware.org/logos/brand.png)](https://discord.gg/M6aTR9eTwN)
 
-@eliware/infrastructure-template [![License](https://img.shields.io/github/license/eliware/infrastructure-template)](https://github.com/eliware/infrastructure-template/blob/main/LICENSE) [![CI](https://github.com/eliware/infrastructure-template/actions/workflows/ci.yaml/badge.svg)](https://github.com/eliware/infrastructure-template/actions/workflows/ci.yaml)
+## @eliware/infrastructure-template [![License](https://img.shields.io/github/license/eliware/infrastructure-template)](https://github.com/eliware/infrastructure-template/blob/main/LICENSE) [![CI](https://github.com/eliware/infrastructure-template/actions/workflows/ci.yaml/badge.svg)](https://github.com/eliware/infrastructure-template/actions/workflows/ci.yaml)
+
+An Eliware infrastructure repository template for desired state, validation, rollout, and rollback boundaries.
 
 ## Table of Contents
 
@@ -18,20 +20,18 @@
 - [Validation](#validation)
 - [Change boundaries](#change-boundaries)
 - [Support](#support)
-- [License](#license)
 - [Links](#links)
+- [License](#license)
 
 ## Features
 
 This template owns reusable infrastructure repository structure; each derived repository owns its platform-specific desired state and change boundaries.
 
-Package description: An Eliware infrastructure repository template for desired state, validation, rollout, and rollback boundaries. Author: Eliware <eliware@eliware.org>. License: MIT.
-
 An Eliware infrastructure repository template for desired state, validation, rollout, and rollback boundaries. It provides an indexed desired-state surface and shared Node.js repository validation.
 
 ## Requirements
 
-Use Node.js 26 and npm. The template is private and must remain private.
+Use Node.js 26 or later and npm. The template is private and must remain private.
 
 ## Setup
 
@@ -53,7 +53,7 @@ Run npm test for aggregate repository validation through eliware-test. CI runs n
 
 ## Troubleshooting
 
-If validation cannot find Node.js or npm, install Node.js 26 and run npm ci. A passing repository check does not prove that deployed infrastructure is healthy.
+If validation cannot find Node.js or npm, install Node.js 26 or later and run npm ci. A passing repository check does not prove that deployed infrastructure is healthy.
 
 ## Security
 
@@ -81,21 +81,20 @@ Document promotion and rollback procedures in the owning Operations or workspace
 
 ## Support
 
-For help or discussion, join the Eliware community:
+For help, questions, or to chat with the author and community, visit:
 
-[![Discord](https://eliware.org/logos/discord_96.png)](https://discord.gg/M6aTR9eTwN)
+[![Discord](https://eliware.org/logos/discord_96.png)](https://discord.gg/M6aTR9eTwN)[![eliware.org](https://eliware.org/logos/eliware_96.png)](https://discord.gg/M6aTR9eTwN)
 
 **[eliware.org on Discord](https://discord.gg/M6aTR9eTwN)**
 
-## License
-
-[license](LICENSE)
-
 ## Links
 
-- [Home Page](https://github.com/eliware/infrastructure-template#readme)
-- [GitHub repository](https://github.com/eliware/infrastructure-template.git)
-- [Eliware](https://eliware.org)
-- [GitHub organization](https://github.com/eliware)
+- [Home Page](https://eliware.org)
+- [GitHub Org](https://github.com/eliware)
+- [GitHub Repo](https://github.com/eliware/infrastructure-template)
+- [Bug Reports](https://github.com/eliware/infrastructure-template/issues)
 - [Discord](https://discord.gg/M6aTR9eTwN)
-- [specifications](specs/README.md)
+
+## License
+
+[MIT © Eliware](LICENSE)
