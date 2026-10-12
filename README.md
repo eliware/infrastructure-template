@@ -25,59 +25,63 @@ An Eliware infrastructure repository template for desired state, validation, rol
 
 ## Features
 
-This template owns reusable infrastructure repository structure; each derived repository owns its platform-specific desired state and change boundaries.
-
-An Eliware infrastructure repository template for desired state, validation, rollout, and rollback boundaries. It provides an indexed desired-state surface and shared Node.js repository validation.
+This template provides a reusable starting point. Each derived repository owns its product behavior and operating decisions.
 
 ## Requirements
 
-Use Node.js 26 or later and npm. The template is private and must remain private.
+Use Node.js 26 or later and npm 12 or later for repository validation.
 
 ## Setup
 
-Create a private repository from this template, replace its package identity and repository URLs, then run npm ci. Add the desired state and deterministic checks for the managed infrastructure.
+Create a repository from this template. Replace the template name, description, URLs, keywords, and sample content.
+Run `npm ci` from the repository root.
 
 ## Usage
 
-Use desired-state/ for committed declarative inputs. Define the managed targets and environments in a derived repository; this template does not include live infrastructure configuration.
+Follow this README and the [user guide](docs/README.md).
 
 ## Development
 
-Read AGENTS.md, specs/README.md, and the applicable shared conventions before changing the template. Keep repository-specific requirements in specs/directives.yaml.
-
-Documentation: [specifications](specs/README.md)
+Read [AGENTS.md](AGENTS.md) and [the specifications index](specs/README.md) before you change files.
+Keep documents and records in the repository that owns them.
 
 ## Testing
 
-Run npm test for aggregate repository validation through eliware-test. CI runs npm ci followed by npm test. Add infrastructure-specific deterministic validation when a derived repository defines the corresponding manifests and schemas.
+Run `npm test` before handoff. It runs the repository checks through `eliware-test`.
 
 ## Troubleshooting
 
-If validation cannot find Node.js or npm, install Node.js 26 or later and run npm ci. A passing repository check does not prove that deployed infrastructure is healthy.
+Install the required Node.js and npm versions. Run `npm ci` after dependency changes.
+Review the file and rule in any validation error.
 
 ## Security
 
-Keep the repository private. Do not commit plaintext secrets, credentials, decrypted runtime state, or live-only state. Encrypted secret payloads may be committed. Review committed inputs for secrets even when they are encrypted.
+Keep credentials, secrets, private data, and runtime state out of Git.
+Use only approved secret stores for secret values.
 
 ## Managed targets
 
-A derived repository must identify each managed platform, environment, purpose, and ownership boundary. No live target is configured by this template.
+Name each platform, environment, purpose, and owner in the derived repository.
+This template defines no live target.
 
 ## Configuration
 
-The template has no runtime configuration or environment variables. Package metadata and .knit/deploy.yaml configure repository tooling and synchronization; they are not runtime settings.
+This template has no runtime settings. Package metadata and `.knit/deploy.yaml` configure repository tools.
 
 ## Desired state
 
-Keep committed declarative configuration and deployment inputs in desired-state/, organized by managed target and environment. Keep live runtime evidence and canonical operating procedures in the owning Operations or workspace repository.
+Store committed declarative inputs under `desired-state/`. Organize them by target and environment.
+Keep live evidence and operating procedures in their owning repositories.
 
 ## Validation
 
-Run deterministic syntax, schema, reference, render, and safety checks for the desired state present in a derived repository. Keep platform-specific preflights in that repository. A successful render or repository validation does not prove live infrastructure health.
+Check syntax, schemas, references, rendered output, and safety rules for the files in the derived repository.
+A successful check does not prove live infrastructure health.
 
 ## Change boundaries
 
-Document promotion and rollback procedures in the owning Operations or workspace repository and link to them here. Do not treat a commit, validation pass, or render as authorization to deploy.
+Link to approved rollout and rollback procedures in the owning Operations or workspace repository.
+Do not treat a commit or validation result as approval to deploy.
 
 ## Support
 
