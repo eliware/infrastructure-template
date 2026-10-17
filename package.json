@@ -1,8 +1,8 @@
 {
   "name": "@eliware/infrastructure-template",
-  "version": "12.0.0",
+  "version": "13.0.0",
   "type": "module",
-  "description": "An Eliware infrastructure repository template for desired state, validation, rollout, and rollback boundaries.",
+  "description": "An Eliware infrastructure repository template for target configuration, validation, rollout, and rollback boundaries.",
   "keywords": [
     "infrastructure-template",
     "infrastructure",

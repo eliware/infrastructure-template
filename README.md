@@ -2,7 +2,7 @@
 
 ## @eliware/infrastructure-template [![License](https://img.shields.io/github/license/eliware/infrastructure-template)](https://github.com/eliware/infrastructure-template/blob/main/LICENSE) [![CI](https://github.com/eliware/infrastructure-template/actions/workflows/ci.yaml/badge.svg)](https://github.com/eliware/infrastructure-template/actions/workflows/ci.yaml)
 
-An Eliware infrastructure repository template for desired state, validation, rollout, and rollback boundaries.
+An Eliware infrastructure repository template for target configuration, validation, rollout, and rollback boundaries.
 
 ## Table of Contents
 
@@ -16,7 +16,7 @@ An Eliware infrastructure repository template for desired state, validation, rol
 - [Security](#security)
 - [Managed targets](#managed-targets)
 - [Configuration](#configuration)
-- [Desired state](#desired-state)
+- [Target configuration](#target-configuration)
 - [Validation](#validation)
 - [Change boundaries](#change-boundaries)
 - [Support](#support)
@@ -25,7 +25,7 @@ An Eliware infrastructure repository template for desired state, validation, rol
 
 ## Features
 
-This template provides a reusable starting point. Each derived repository owns its product behavior and operating decisions.
+This template starts private infrastructure repositories. Each derived repository defines its managed targets and controls.
 
 ## Requirements
 
@@ -52,7 +52,7 @@ Run `npm test` before handoff. It runs the repository checks through `eliware-te
 ## Troubleshooting
 
 Install the required Node.js and npm versions. Run `npm ci` after dependency changes.
-Review the file and rule in any validation error.
+For each validation error, inspect the named file and rule.
 
 ## Security
 
@@ -68,20 +68,20 @@ This template defines no live target.
 
 This template has no runtime settings. Package metadata and `.knit/deploy.yaml` configure repository tools.
 
-## Desired state
+## Target configuration
 
-Store committed declarative inputs under `desired-state/`. Organize them by target and environment.
-Keep live evidence and operating procedures in their owning repositories.
+Store committed configuration files under `desired-state/`. Organize them by target and environment.
+Keep live status records and operating procedures in their owning repositories.
 
 ## Validation
 
 Check syntax, schemas, references, rendered output, and safety rules for the files in the derived repository.
-A successful check does not prove live infrastructure health.
+A passing check does not prove live infrastructure health.
 
 ## Change boundaries
 
 Link to approved rollout and rollback procedures in the owning Operations or workspace repository.
-Do not treat a commit or validation result as approval to deploy.
+Do not use a commit or validation result as approval to deploy.
 
 ## Support
 

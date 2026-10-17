@@ -8,23 +8,23 @@ Use this guide to create and maintain an infrastructure repository from this tem
 2. Set its package identity and repository URLs.
 3. Name each platform, environment, purpose, and owner in the repository README.
 4. Put committed declarative inputs under `desired-state/`.
-5. Keep live runtime evidence out of Git.
+5. Keep live runtime records out of Git.
 
-## Validate desired state
+## Validate configuration
 
-Add deterministic checks for the files in the repository. Check syntax, schemas, references, rendered output, and safety rules where they apply.
+Add deterministic checks for repository files. Check syntax, schemas, references, generated output, and safety rules when required.
 
-Keep platform-specific preflight checks in the repository that owns the platform configuration. A successful check does not prove that live infrastructure is healthy.
+Keep platform checks in the repository that owns the platform configuration. A passing check does not prove live infrastructure health.
 
 ## Change and rollback
 
 Document promotion and rollback in the owning Operations or workspace repository. Link to the approved procedure.
 
-Do not treat a commit, render, or validation result as approval to deploy. Use the authorized change process for each target.
+Do not use a commit, output, or validation result as approval to deploy. Use the approved change process for each target.
 
-## Protect data
+## Keep data out of Git
 
-Keep plaintext secrets, credentials, decrypted state, live-only state, and runtime output out of Git. Review encrypted files before commit. Keep this repository private.
+Keep plaintext secrets, credentials, decrypted state, live-only state, and runtime output out of Git. Examine encrypted files before commit. Keep this repository private.
 
 ## Validate the repository
 

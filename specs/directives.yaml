@@ -3,7 +3,9 @@ description: Repository-specific directives for the Eliware infrastructure templ
 directives:
   - id: E-9000.0
     dos:
-      - Provide a private infrastructure baseline organized around committed desired state and repository-specific deterministic validation.
-      - Derived repositories must define managed targets, environments, validation, change control, rollback boundaries, and links to canonical operational procedures.
+      - Use committed infrastructure files and deterministic checks as the template baseline.
+      - Document managed targets and environments in each derived repository.
+      - Define validation, change control, and rollback boundaries.
+      - Link each target to its canonical operating procedures.
     donts:
-      - Do not add live infrastructure configuration, plaintext secrets, or copied canonical operational procedures to this template.
+      - Do not add live infrastructure files, plaintext secrets, or copied operating procedures.

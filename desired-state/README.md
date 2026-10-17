@@ -1,5 +1,5 @@
-# Desired state
+# Committed infrastructure inputs
 
-Place committed declarative infrastructure inputs under this directory and
-organize them by managed target and environment. Keep live runtime evidence,
-rollout decisions, and rollback records in the owning operations surface.
+Store committed configuration files in this directory. Organize them by target
+and environment. Keep live status records, rollout decisions, and rollback
+records in the repository that owns them.

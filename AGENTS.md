@@ -4,7 +4,7 @@
 
 This repository is `eliware/infrastructure-template`.
 
-It starts repositories for infrastructure desired state.
+It starts repositories for infrastructure configuration.
 
 ## Scope and boundaries
 
@@ -25,6 +25,7 @@ Use native ESM for maintained JavaScript modules.
 Run `npm test` for aggregate validation.
 Run `npm run lint` for lint checks.
 Run `npm run audit` for dependency checks.
+
 Run `npm run format` to format files.
 Run `npm run format:check` to check formatting.
 
@@ -34,14 +35,14 @@ Keep credentials, secret values, private data, and runtime state out of Git.
 
 ## Changes
 
-Keep changes within this repository scope.
+Keep changes in this repository.
 Use Eliware Operations for approval before external changes.
 
 ## Infrastructure
 
-Document managed targets, desired state, checks, change control, and rollback in README.md.
+Document managed targets, committed files, checks, change control, and rollback in README.md.
 
 ## Private distribution
 
-Limit access to authorized Eliware users.
+Limit access to approved Eliware users.
 Do not publish npm packages.
