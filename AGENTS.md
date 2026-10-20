@@ -31,6 +31,17 @@ Keep credentials, secret values, private data, and runtime state out of Git.
 
 ## Changes
 
+Use this repository for configuration and validation.
+Update RELEASE_NOTES.md for each user-visible change.
+
 ## Infrastructure
 
+Keep committed target configuration under desired-state/.
+Keep live status and operating procedures in their owning repositories.
+Link to approved change and rollback procedures.
+
 ## Private distribution
+
+Keep this repository private.
+Set `package.json.private` to `true`.
+Do not add npm publication commands or credentials.

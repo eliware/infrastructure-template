@@ -38,7 +38,7 @@ Run `npm ci` from the repository root.
 
 ## Usage
 
-Follow this README and the [user guide](docs/README.md).
+Follow this README and the [user guide](docs/README.md). Read the [release notes](RELEASE_NOTES.md) for change history.
 
 ## Development
 
@@ -50,6 +50,9 @@ Keep documents and records in the repository that owns them.
 Run `npm test` before handoff. It runs the repository checks through `eliware-test`.
 
 ## Troubleshooting
+
+If a check fails, read the reported file path and rule.
+Correct the derived repository file, then run `npm test` again.
 
 ## Security
 
