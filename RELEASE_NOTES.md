@@ -12,5 +12,3 @@
 - Align GitHub Actions checkout with v7 and full Git history.
 - Align Knit deployment commands with the shared workflow.
 - Add guidance for replacing template documentation in derived repositories.
-- Run CodeScope refactor with no actionable findings.
-- Run CodeScope all with a pass result and no reported issues.
