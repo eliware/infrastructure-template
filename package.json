@@ -1,6 +1,6 @@
 {
   "name": "@eliware/infrastructure-template",
-  "version": "14.0.0",
+  "version": "15.0.1",
   "type": "module",
   "description": "An Eliware infrastructure repository template for target configuration, validation, rollout, and rollback boundaries.",
   "keywords": [
@@ -22,7 +22,7 @@
     "node": ">=26"
   },
   "devDependencies": {
-    "@eliware/test": "^13.0.0"
+    "@eliware/test": "^15.0.1"
   },
   "jest": {
     "testEnvironment": "node",
